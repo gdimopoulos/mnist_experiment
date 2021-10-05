@@ -7,7 +7,7 @@ The experiment can train four different models:
 3. Group Equivariant Convolutional Networks
 4. Visual Transformers
 
-More detailed documentation is provided in [experiment.pdf](https://github.com/gdimopoulos/mnist_experiment/blob/main/experiment.pdf)
+More detailed documentation is provided in [From_Idea_to_Implementation.pdf](https://github.com/gdimopoulos/mnist_experiment/blob/main/From_Idea_to_Implementation.pdf)
 
 # Instructions
 The main program that runs the experiments is `experiment.py`.

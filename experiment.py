@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def seed_everything(seed):
+def seed_everything(seed, cuda):
     """Use the same seed for python and torch and use deterministic
     algorithms to improve reproducibility.
 
@@ -34,7 +34,10 @@ def seed_everything(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    torch.use_deterministic_algorithms(True)
+    if cuda:
+        environ["CUBLAS_WORKSPACE_CONFIG"] = ":16:8"
+    else:
+        torch.use_deterministic_algorithms(True)
 
 
 # Parse command line arguments
